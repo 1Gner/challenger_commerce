@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+.cards_left {
+
+    .Text{
+       
+        margin-bottom: 20px;
+        h1{
+            
+            color: hsl(14, 65%, 9%);
+            font-family: "Red Hat Text", sans-serif;
+        }
+
+    }
+
+    .list_mini_cards {
+
+
+        .line1 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .line2 {
+            margin-top: 24px;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .line3 {
+            margin-top: 24px;
+            display: flex;
+            gap: 20px;
+        }
+
+
+    }
+}

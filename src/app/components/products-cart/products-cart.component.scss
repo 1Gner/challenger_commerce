@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+.card_select_product {
+    display: flex;
+    font-family: "Red Hat Text", sans-serif;
+    flex-direction: column;
+
+    width: 100%;
+
+    .titulo {
+
+
+        h3 {
+            font-size: 16px;
+            color: hsl(14, 65%, 17%);
+            
+        }
+    }
+
+    .photo {
+        display: flex;
+        justify-content: end;
+
+        button{
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid hsl(14, 25%, 72%);
+            
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }
+
+        }
+
+        img {
+            
+            
+            padding: 2px;
+            max-width: 15px;
+
+        }
+    }
+
+    .quantidade {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+
+        .text_p {
+            gap: 10px;
+            display: flex;
+            font-size: 16px;
+
+            .p1 {
+                color: hsl(14, 86%, 42%);
+            }
+
+            .p2 {
+                color: hsl(14, 25%, 72%);
+            }
+
+            .p3 {
+                color: hsl(12, 20%, 44%);
+            }
+        }
+
+
+
+    }
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+.hide {
+    display: none !important;
+  }
+
+.card_right {  
+    
+    
+
+    font-family: "Red Hat Text", sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    
+
+    .titulo {
+        padding-top: 20px;
+        padding-left: 30px;
+        margin-bottom: 35px;
+        align-items: center;
+        h2{
+           
+            color: hsl(14, 86%, 42%);
+        }
+    }
+
+    
+
+    .select_item{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    
+        
+        
+        .photo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img{
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 200px;
+                width: 100%;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    transform: scale(0.95);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+
+        p{
+            margin-top: 25px;
+            color: hsl(14, 25%, 72%);
+        }
+    }
+
+
+  
+
+    .with_items{
+        width: 100%;
+        padding: 0px 30px;
+        gap: 40px 40px;
+
+
+        
+
+        .order_price {
+            margin-bottom: 20px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p{
+                margin: 0px;
+                color: hsl(12, 20%, 44%);
+            }
+        }
+        .text_carbon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: hsl(13, 31%, 94%);
+            width: 100%;
+            border-radius: 10px;
+            padding: 15px 0px;
+            p{
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                color: hsl(12, 20%, 44%);
+            }
+        }
+
+        .confirm_order{
+            .botao{
+                font-family: "Red Hat Text", sans-serif;
+                font-weight: bold;
+                margin-top: 30px;
+                width: 100%;
+                padding: 12px 0px;
+                border-radius: 30px;
+                border: hsl(14, 86%, 42%);
+                background-color: hsl(14, 86%, 42%);
+                color: white;
+
+                &:active {
+                    transform: scale(0.98);
+                }
+            }
+
+        }
+    }
+}

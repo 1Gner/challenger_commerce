@@ -1,0 +1,20 @@
+<div class="card_select_product">
+
+    <div class="titulo">
+        <h3>{{produto}}</h3>
+    </div>
+
+    <div class="photo">
+        <button><img src="../../../assets/images/icon-remove-item.svg" alt="" (click)="removeItem()"></button>
+    </div>
+
+    <div class="quantidade">
+        <div class="text_p">
+            <p class="p1">{{quantidade}}x </p>
+            <p class="p2">&#64; ${{precoUnitario | number: '1.2-2'}}</p>
+            <p class="p3"> ${{precoTotal| number: '1.2-2' }}</p>
+        </div>
+
+    </div>
+    <hr>
+</div>

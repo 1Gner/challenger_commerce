@@ -1,0 +1,41 @@
+<div class="card">
+
+    <div class="photo" >
+        <img src="{{photo}}" alt="" [ngClass]="{'border-orange': addedToCart}">
+
+
+
+        <div class="select">
+           
+            <div *ngIf="!addedToCart; else quantityControl" >
+                <button class="add_to_cart" (click)="addToCart()">
+                    <span class="icone_cart">🛒</span> Add to Cart
+                </button>
+
+            </div>
+
+            <ng-template #quantityControl>
+                <div class="quantity-control">
+                    <button (click)="decrease()" class="quantity-btn">-</button>
+                    <span class="quantity">{{ quantity }}</span>
+                    <button (click)="increase()" class="quantity-btn">+</button>
+                </div>
+            </ng-template>
+        </div>
+
+
+    </div>
+
+    <div class="tipe">
+        <p>{{tipes}}</p>
+
+    </div>
+
+    <div class="product_name">
+        <h2>{{product}}</h2>
+    </div>
+
+    <div class="price">
+        <h2>R${{price | number: '1.2-2'}}</h2>
+    </div>
+</div>

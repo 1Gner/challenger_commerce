@@ -1,0 +1,29 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(20, 50%, 98%);
+
+    .card {
+        max-width: 1450px;
+        width: 100%;
+        display: flex;
+
+        .cards_left {
+            max-width: 1000px;
+            width: 100%;
+
+        }
+
+            
+
+        .card_right {
+            max-width: 400px;
+            width: 100%;
+           
+
+        }
+    }
+}
