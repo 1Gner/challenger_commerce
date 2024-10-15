@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+.contain {
+
+
+    .card_select_product {
+
+        font-family: "Red Hat Text", sans-serif;
+        display: flex;
+
+
+        width: 100%;
+        padding: 10px 10px;
+
+        .titulo {
+
+            .produto {
+                margin-bottom: 5px;
+
+                p {
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: hsl(14, 65%, 17%);
+
+                }
+            }
+
+            .left {
+                gap: 10px;
+                display: flex;
+
+
+                .p1 {
+                    font-weight: bold;
+                    font-size: 12px;
+                    color: hsl(14, 86%, 42%);
+                }
+
+                .p2 {
+                    font-weight: bold;
+                    font-size: 12px;
+                    color: hsl(14, 25%, 72%);
+                }
+            }
+
+
+        }
+
+        .photo {
+            display: flex;
+            justify-content: end;
+
+            img {
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 45px;
+                width: 100%;
+                border-radius: 10px;
+
+
+            }
+
+
+        }
+
+        .quantidade {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+
+            .text_p {
+                gap: 10px;
+                display: flex;
+                font-size: 16px;
+
+
+                .right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .p3 {
+                        font-size: 13px;
+                        font-weight: bold;
+                        color: hsl(12, 20%, 44%);
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}

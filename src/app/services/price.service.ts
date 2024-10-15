@@ -20,5 +20,7 @@ removePrice(value:number){
   this.price.next(this.price.value - value)
 }
 
+
+
   constructor() { }
 }

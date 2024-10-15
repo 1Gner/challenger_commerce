@@ -6,6 +6,7 @@ import { ModuleFormat } from 'module';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ProductsCartComponent } from '../products-cart/products-cart.component';
 import { SelectProductService } from '../../services/select-product.service';
+import { StatusService } from '../../services/status.service';
 
 
 interface Produto {
@@ -45,6 +46,7 @@ export class CardRightComponent implements OnInit {
     private serviceQuantity: QuantitySharedService
     , private priceservice: PriceService
     , private selecTProd: SelectProductService
+    , private status:StatusService
 
   ) {
 
@@ -76,6 +78,10 @@ export class CardRightComponent implements OnInit {
       })
     });
 
+    this.priceservice.price$.subscribe((newPrice: number) => {
+      this.price = newPrice;
+    })
+
 
 
   }
@@ -84,21 +90,14 @@ export class CardRightComponent implements OnInit {
 
 
   onSubmit() {
-    console.log('Dados antes de adicionar o componente:', {
-      precoTotal: this.precoT,
-      precoUnitario: this.precoU,
-      produto: this.product,
-      quantidade: this.quantidade
-
-
-    })
-  }
+    this.status.onStatus();
+    }
+  
 
   removeItem(productKey: string) {
     const componentRef = this.productComponentMap.get(productKey);
+    this.priceservice.removePrice(componentRef?.instance.precoTotal || 0)
     this.serviceQuantity.removeComp(componentRef?.instance.quantidade || 0);
-
-    
     this.selecTProd.updateRemoverQuantidade(productKey, componentRef?.instance.quantidade || 0);
     
     

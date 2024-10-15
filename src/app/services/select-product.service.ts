@@ -6,6 +6,7 @@ interface Produto {
   quantidade: number;
   precoUnitario: number;
   precoTotal: number;
+  photo:string;
 }
 
 
@@ -20,19 +21,7 @@ interface Produto {
 export class SelectProductService {
 
 
-  private produto = new BehaviorSubject<string>("");
-  produto$ = this.produto.asObservable();
-
-  private quantidade = new BehaviorSubject<number>(0);
-  quantidade$ = this.quantidade.asObservable();
-
-  private precoTotal = new BehaviorSubject<number>(0);
-  precoTotal$ = this.precoTotal.asObservable();
-
-  private precoUnitario = new BehaviorSubject<number>(0);
-
-  precoUnitario$ = this.precoUnitario.asObservable();
-
+  
 
 
   private produtos = new Map<string, Produto>();
@@ -41,9 +30,9 @@ export class SelectProductService {
 
 
 
-  initProduto(produto: string, quantidade: number, precoUnitario: number) {
+  initProduto(produto: string, quantidade: number, precoUnitario: number, photo:string) {
     const precoTotal = quantidade * precoUnitario;
-    this.produtos.set(produto, { quantidade, precoUnitario, precoTotal });
+    this.produtos.set(produto, { quantidade, precoUnitario, precoTotal ,photo});
     this.produtos$.next(this.produtos);
   }
 
@@ -104,16 +93,6 @@ export class SelectProductService {
 
   constructor() {
 
-  }
-
-  init(Produto: string
-    , Quantidade: number
-    , PrecoT: number
-    , PrecoU: number) {
-    this.produto.next(Produto)
-    this.quantidade.next(Quantidade)
-    this.precoTotal.next(PrecoT)
-    this.precoUnitario.next(PrecoU)
   }
 
 

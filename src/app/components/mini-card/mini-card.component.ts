@@ -20,7 +20,7 @@ export class MiniCardComponent implements OnInit {
   addedToCart = false;
   quantity: number = 0;
   @Input()
-  photo: string = "";
+  photo: string="";
   @Input()
   tipes: string = "";
   @Input()
@@ -41,8 +41,8 @@ export class MiniCardComponent implements OnInit {
     this.serviceQuantity.addQuantity();
     this.priceservice.addPrice(this.price);
     this.priceT = this.price * this.quantity;
-    this.selecTProd.init(this.product, this.quantity, this.priceT, this.price);
-    this.selecTProd.initProduto(this.product, this.quantity, this.priceT)
+    
+    this.selecTProd.initProduto(this.product, this.quantity, this.priceT, this.photo)
 
 
   }
@@ -52,7 +52,6 @@ export class MiniCardComponent implements OnInit {
     this.serviceQuantity.addQuantity();
     this.priceservice.addPrice(this.price);
     this.priceT = this.price * this.quantity;
-    this.selecTProd.init(this.product, this.quantity, this.priceT, this.price);
     this.selecTProd.updateQuantidade(this.product, this.quantity)
   }
 
@@ -62,7 +61,6 @@ export class MiniCardComponent implements OnInit {
       this.serviceQuantity.removeQuantity();
       this.priceservice.removePrice(this.price);
       this.priceT = this.price * this.quantity;
-      this.selecTProd.init(this.product, this.quantity, this.priceT, this.price);
       this.selecTProd.updateQuantidade(this.product, this.quantity)
     }
 
@@ -72,17 +70,11 @@ export class MiniCardComponent implements OnInit {
       this.selecTProd.deletaProduto(this.product);
     }
 
-
   }
 
   ngOnInit() {
 
     this.selecTProd.getProdutos$().subscribe(produtos => {
-      produtos.forEach((produto,chave) => {
-      
-      })
-
-      
       if (produtos.has(this.product)) {
         this.quantity = produtos.get(this.product)?.quantidade || 0;
       

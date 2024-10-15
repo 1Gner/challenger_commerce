@@ -1,0 +1,35 @@
+<div class="order_confirm">
+
+    <div class="section_top">
+        <div class="photo">
+            <img src="../../../assets/images/icon-order-confirmed.svg" alt="">
+       </div>
+
+       <div class="titulo">
+            <h1>Order Confirmed</h1>
+       </div>
+
+       <div class="texto">
+            <p>We hope you enjoy your food!</p>
+       </div>
+
+    </div>
+
+    <div class="card_mid">
+            <div #orders></div>
+
+
+    </div>
+
+    <div class="order_total">
+        <p>Order Total</p>
+
+        <h2>${{priceOrder | number: '1.2-2'}}</h2>
+    </div>
+
+    <div class="confirm_new_order">
+        <button (click)="closeOrderConfirmation()"> Start New Order</button>
+    
+    </div>
+
+</div>

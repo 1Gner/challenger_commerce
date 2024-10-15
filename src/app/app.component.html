@@ -7,7 +7,18 @@
         <div class="card_right">
             <app-card-right></app-card-right>
         </div>
+
+
+
+        <div [ngClass]="{'hide': !isOrderConfirmed}" class="card_confirmados">
+            <app-order-confirm class="xd"></app-order-confirm>
+        </div>
     </div>
+
+
+
+
 </div>
+
 
 <router-outlet></router-outlet>
